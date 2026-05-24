@@ -1,0 +1,189 @@
+/* Import phông chữ Inter hiện đại */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* MÀU NỀN TỔNG THỂ: Tone tối sâu lắng (#1C2A52 pha #3B1C52) cực sang trọng và dịu mắt */
+html, body, [data-testid="stAppViewContainer"], [class*="st-emotion-cache"] {
+    font-family: 'Inter', sans-serif !important;
+    background: linear-gradient(135deg, #16223f 0%, #1c2a52 40%, #2d1b4e 75%, #3b1c52 100%) !important;
+    background-attachment: fixed !important;
+}
+
+/* Xử lý triệt để loại bỏ các mảng nền trắng/tối mặc định của Streamlit */
+[data-testid="stVerticalBlock"], .stApp {
+    background: transparent !important;
+}
+
+/* Ẩn các nút điều hướng và header mặc định */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {background: transparent !important;}
+
+/* THANH SIDEBAR: Thiết kế kính mờ trong suốt trên nền tối */
+[data-testid="stSidebar"] {
+    background: rgba(255, 255, 255, 0.04) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Định dạng chữ và nhãn trong Sidebar để hiển thị sắc nét trên nền tối */
+[data-testid="stSidebar"] .stMarkdown h3, 
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] .stMarkdown p {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* HEADER CHÍNH: Hoàn toàn trong suốt, hòa quyện tuyệt đối vào hình nền giống ảnh mẫu */
+.main-header {
+    background: transparent !important;
+    padding: 30px 0px 10px 0px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.main-header h1 {
+    color: #ffffff !important;
+    font-size: 36px !important;
+    font-weight: 800 !important;
+    margin: 0 0 10px 0 !important;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 !important;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Tiêu đề mục nội dung chính */
+h3 {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    margin-top: 20px !important;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* THẺ THÔNG SỐ (METRIC CARDS): Khối pha lê tối trong suốt, bo góc mịn */
+.metric-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 22px 15px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.metric-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 6px !important;
+    letter-spacing: 0.8px;
+}
+
+.metric-value {
+    font-size: 24px;
+    color: #ffffff !important;
+    font-weight: 700;
+    margin: 0 !important;
+}
+
+/* NÚT BẤM DỰ ĐOÁN: Dạng kính mờ viền Neon Tím/Xanh, không có khung bao quanh bọc lỗi */
+.stButton>button {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 15px 30px !important;
+    border-radius: 14px !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.25s ease !important;
+}
+
+.stButton>button:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 12px 30px rgba(137, 130, 255, 0.25) !important;
+}
+
+/* THẺ KẾT QUẢ DỰ ĐOÁN */
+.result-card {
+    padding: 28px;
+    border-radius: 18px;
+    margin-top: 25px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.result-card h2 {
+    margin-top: 0 !important;
+    font-size: 22px !important;
+    font-weight: 800 !important;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.result-card p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Kết quả Khách mua hàng - Kính Mint mờ nhẹ nhã nhặn */
+.success-card {
+    background: rgba(52, 211, 153, 0.12) !important; 
+    color: #ffffff !important;
+    border: 1px solid rgba(52, 211, 153, 0.25) !important;
+}
+.success-card h2 { color: #34d399 !important; }
+
+/* Kết quả Khách không mua - Kính Rose mờ nhẹ nhã nhặn */
+.danger-card {
+    background: rgba(248, 113, 113, 0.12) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(248, 113, 113, 0.25) !important;
+}
+.danger-card h2 { color: #f87171 !important; }
+
+.result-meta {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* FOOTER CHÂN TRANG */
+.footer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 12px;
+    margin-top: 60px;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
